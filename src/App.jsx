@@ -1,13 +1,16 @@
 
 import './App.css'
-
+import Header from './Header'
+import Banner from './Banner'
+import Courses from './Courses'
 function App() {
 
 
   return (
-    <div className='p-5 border border-success'>
-      <h1>Welcome to ReactJS App Development base practice</h1>
-      
+    <div className=''>
+      <Header></Header>
+      <Banner></Banner>
+      <Courses></Courses>
     </div>
   )
 }

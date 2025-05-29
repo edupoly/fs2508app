@@ -1,0 +1,39 @@
+body{
+  margin:0px
+}
+.header ul{
+  display: flex;
+  padding:0px;
+  background-color: lightblue;
+  margin:0px;
+}
+.header ul li{
+  width:200px;
+  list-style: none;
+  padding:20px;
+}
+.banner{
+  margin:40px;
+  border-radius: 10px;
+  padding:50px;
+  background-color: darkgrey;
+}
+.banner h1{
+  font-size: 4em;
+}
+.courses ul{
+  display: flex;
+  flex-wrap: wrap;
+  padding:20px;
+  margin:20px;
+  justify-content: space-evenly;
+}
+.courses ul li{
+  width:250px;
+  height:200px;
+  padding:20px;
+  margin: 20px;
+  border-radius: 10px;
+  list-style: none;
+  background-color: lightslategrey;
+}
