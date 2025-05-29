@@ -5,8 +5,9 @@ function App() {
 
 
   return (
-    <div>
-      <h1>Welcome to ReactJS App Development practice</h1>
+    <div className='p-5 border border-success'>
+      <h1>Welcome to ReactJS App Development base practice</h1>
+      
     </div>
   )
 }
