@@ -1,9 +1,7 @@
 import React from 'react';
-
 function Todolist(){
     //state
     var [todos,setTodos] = React.useState([])
-
     //action
     function addTodo(){
         var ntodo = document.getElementById("d1").value;
@@ -14,7 +12,6 @@ function Todolist(){
         temp.splice(ind,1)
         setTodos([...temp])
     }
-
     //UI
     return (
         <div className='m-3 p-5 border border-danger'>
