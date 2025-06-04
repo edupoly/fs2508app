@@ -2,21 +2,21 @@ import React from 'react';
 import Todo from './Todo';
 function Todolist(){
 
-    var [todos,setTodos] = React.useState([])
+    var [todos,setTodos] = React.useState(["get car","pay school fee",'Purchase toys'])
     var [newtodo,setnewtodo] = React.useState('')
 
     function addTodo(){
 
         setTodos([...todos,newtodo])
     }
-    function delTodo(ind){
+    var delTodo = React.useCallback(function (ind){
         var temp = [...todos];
         temp.splice(ind,1)
         setTodos([...temp])
-    }
+    },[])
 
     return (
-        <div className='m-3 p-5 border border-danger'>
+        <div className='m-2 p-2 border border-danger'>
             <input type="text" onChange={(e)=>{setnewtodo(e.target.value)}}/>
             <button onClick={()=>{addTodo()}}>Add Todo</button>
             <br />

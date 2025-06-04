@@ -6,7 +6,7 @@ import Todolist from './Todolist'
 function App() {
   return (
 
-      <div className='m-3 p-5 border border-success'>
+      <div className='m-2 p-2 border border-success'>
         <h1>Welcome to ReactJS App Development base practice</h1>
         {/* <Countries></Countries> */}
         <Todolist></Todolist>
