@@ -1,11 +1,12 @@
 import React from 'react';
+import Todo from './Todo';
 function Todolist(){
-    //state
+
     var [todos,setTodos] = React.useState([])
     var [newtodo,setnewtodo] = React.useState('')
-    //action
+
     function addTodo(){
-        // var ntodo = document.getElementById("d1").value;
+
         setTodos([...todos,newtodo])
     }
     function delTodo(ind){
@@ -13,18 +14,7 @@ function Todolist(){
         temp.splice(ind,1)
         setTodos([...temp])
     }
-    React.useEffect(()=>{
-        //the work tobe done in mounting time as well as updation time
-        console.log("Chiranjeevi");
-    })
-    React.useEffect(()=>{
-        //only on mounting time
-        console.log("Jai Balayya");
-        return ()=>{
-            //only on unmounting time
-        }
-    },[])
-    //UI
+
     return (
         <div className='m-3 p-5 border border-danger'>
             <input type="text" onChange={(e)=>{setnewtodo(e.target.value)}}/>
@@ -34,10 +24,7 @@ function Todolist(){
                 {!todos && <i>Please add Todo</i>}
                 {
                     todos?.map((todo,i)=>{
-                        return <li className="border border-2 p-2 my-2">
-                            {todo}
-                            <button onClick={()=>{delTodo(i)}}>Delete</button>
-                            </li>
+                        return <Todo todo={todo} i={i} delTodo={delTodo}></Todo>
                     })
                 }
             </ul>
