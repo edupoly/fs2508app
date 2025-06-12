@@ -1,9 +1,11 @@
+import { INC,DEC,ADDTODO } from "./actions"
+
 export function incAction(){
-    return {type:"INC"}
+    return {type:INC}
 }
 export function decAction(){
-    return {type:"DEC"}
+    return {type:DEC}
 }
 export function addTodoAction(ntd){
-    return {type:"ADDTODO",payload:ntd}
+    return {type:ADDTODO,payload:ntd}
 }
